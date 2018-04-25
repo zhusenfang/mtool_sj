@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:hyphenate="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/chat_menu_container"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:orientation="vertical">
+
+    <!-- <com.hyphenate.easeui.widget.EaseChatPrimaryMenu
+        android:id="@+id/primary_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" /> -->
+
+    <com.project.chat.view.MyFramLayout
+        android:id="@+id/primary_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </com.project.chat.view.MyFramLayout>
+
+    <com.project.chat.view.MyFramLayout
+
+        android:id="@+id/extend_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:visibility="gone">
+
+        <com.project.chat.customview.EaseChatExtendMenu
+            android:id="@+id/extend_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="9dp"
+            hyphenate:numColumns="4"/>
+
+        <FrameLayout
+            android:id="@+id/emojicon_menu_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ListView
+            android:id="@+id/listview_quick_reply"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#F4F4F4"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:visibility="invisible"/>
+    </com.project.chat.view.MyFramLayout>
+
+</LinearLayout>

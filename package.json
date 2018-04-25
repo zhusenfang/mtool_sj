@@ -1,0 +1,45 @@
+{
+  "name": "Project",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "configureJPush": "node node_modules/jpush-react-native/JPushConfiguration.js",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "ac-qrcode": "^1.0.1",
+    "create-react-class": "^15.6.3",
+    "jcore-react-native": "^1.1.8-beta2",
+    "jpush-react-native": "^2.0.6",
+    "native-base": "^2.3.1",
+    "npm": "^5.8.0",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.47.2",
+    "react-native-action-button": "^2.8.0",
+    "react-native-camera": "^0.10.0",
+    "react-native-easy-toast": "^1.0.6",
+    "react-native-expandable-section-flatlist": "^1.0.1",
+    "react-native-image-gallery": "^2.1.5",
+    "react-native-image-picker": "^0.26.6",
+    "react-native-image-resizer": "^1.0.0",
+    "react-native-image-zoom-viewer": "^2.0.18",
+    "react-native-modal": "^3.1.0",
+    "react-native-picker": "^4.2.0",
+    "react-native-radio-master": "^1.0.1",
+    "react-native-scrollable-tab-view": "^0.6.7",
+    "react-native-syan-image-picker": "0.0.6",
+    "react-native-wechat": "^1.9.9",
+    "react-native-yunpeng-alipay": "^2.0.0",
+    "react-navigation": "^1.0.0-beta.11"
+  },
+  "devDependencies": {
+    "babel-jest": "20.0.3",
+    "babel-preset-react-native": "3.0.2",
+    "jest": "20.0.4",
+    "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

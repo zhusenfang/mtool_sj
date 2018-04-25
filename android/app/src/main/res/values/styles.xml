@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeMtool" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/windowBg</item>
+    </style>
+    <style name="RightmMenuButton">
+        <item name="android:layout_width">@dimen/rightMenuWidth</item>
+        <item name="android:layout_height">@dimen/rightMenuHeight</item>
+    </style>
+    <style name="up_down_anim_pop" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_pop</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_pop</item>
+    </style>
+    <style name="TrasluentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>
