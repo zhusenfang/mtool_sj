@@ -7,6 +7,7 @@ import {
     TouchableOpacity,
     Image,
     Text,
+    Platform
 
 } from "react-native";
 
@@ -25,9 +26,14 @@ import PublicOder from './view/window/PublicOder'
 
 
 //登录，注册，忘记密码
-import Login from './view/Login';
+//import Login from './view/Login';
+import Login from './view/Zhu_Login';
+
 import Register from './view/Register';
-import ForgetView from './view/ForgetView'
+//import ForgetView from './view/ForgetView'
+import ForgetView from './view/Zhu_ForgetView'
+import ForgetViewTwo from './view/Zhu_ForgetViewTwo'
+import ForgetViewThree from './view/Zhu_ForgetViewThree'
 
 
 
@@ -178,10 +184,25 @@ const StackNavi=StackNavigator({
         screen:Register,
         navigationOptions: ({navigation}) => navigationOptions(navigation, "注  册")
     },
+
     ForgetView:{
      screen:ForgetView,
-        navigationOptions: ({navigation}) => navigationOptions(navigation, "安全认证")
+        navigationOptions: ({navigation}) => Zhu_navigationOptions(navigation, "忘记密码")
     },
+    ForgetViewTwo:{
+        screen:ForgetViewTwo,
+        navigationOptions: ({navigation}) => Zhu_navigationOptions(navigation, "忘记密码")
+    },
+    ForgetViewThree:{
+        screen:ForgetViewThree,
+        navigationOptions: ({navigation}) => Zhu_navigationOptions(navigation, "忘记密码")
+    },
+    DuanXinLogin:{
+        screen:DuanXinLogin,
+        navigationOptions:({navigation}) => Zhu_navigationOptions(navigation, "短信登录")
+    },
+
+
     SaFeView:{
      screen:SaFeView,
         navigationOptions: ({navigation}) => navigationOptions(navigation, "安全认证")
@@ -497,10 +518,6 @@ const StackNavi=StackNavigator({
      screen:SearchOrderHistory,
         navigationOptions:({navigation}) => navigationOptions(navigation, "搜索历史")
     },
-    DuanXinLogin:{
-        screen:DuanXinLogin,
-        navigationOptions:({navigation}) => navigationOptions(navigation, "短信登录")
-    },
     DuanXinRegister:{
         screen:DuanXinRegister,
         navigationOptions:({navigation}) => navigationOptions(navigation, "短信登录")
@@ -697,6 +714,73 @@ const navigationOptions = (navigation, title, isBackHome) => {
             {/*<View style={Styles.leftImgBtn}/>*/}
 
         </View>
+        </View>
+    );
+
+    var gesturesEnabled = false;
+
+    return {header, gesturesEnabled};
+
+}
+
+const Zhu_navigationOptions = (navigation, title, isBackHome) => {
+
+
+    var header = (
+        <View style={{backgroundColor: "#fff"}}>
+            <View
+                style={{
+                height: 45,
+                backgroundColor: "#fff",
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                paddingRight: 0,
+                width:Contents.Screen.width,
+                marginTop:(Platform.OS=='android')?10:25,
+                    paddingLeft:10,
+
+            }}>
+                {/*内容*/}
+
+                {/*左边返回按钮*/}
+                <TouchableOpacity style={{  width:45  }}
+                                  onPress={() => {
+
+                    if (isBackHome) {
+
+                        navigation.goBack('Index');
+
+                    } else {
+
+                        navigation.goBack(null);
+
+                    }
+
+                }}>
+                    <Image source={require("./img/login/gob.png")}/>
+                </TouchableOpacity>
+                <View style={{
+                    height: 45,
+                    width:Contents.Screen.width-100,
+                    justifyContent: "center",
+                    alignItems:'center',
+
+                }}>
+                <Text style={{
+                    textAlign:'center',
+                    color:'#FF305E',
+                    width:'100%',
+                    alignItems:'center',
+                    fontSize: 18,}} allowFontScaling={false} >
+                    {title}
+                </Text>
+                </View>
+
+
+                {/*<View style={Styles.leftImgBtn}/>*/}
+
+            </View>
         </View>
     );
 

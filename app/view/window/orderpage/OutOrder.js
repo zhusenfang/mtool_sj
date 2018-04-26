@@ -120,42 +120,46 @@ export default class OutOrder extends Component {
         // })
     }
     render(){
-        return(<View style={{flex:1,marginTop:20,backgroundColor:'#f9f9f9'}}>
-            <Tabs
-            initialPage={0}
-             // heading="OrderFirst"
-             tabBarUnderlineStyle={{backgroundColor:"#459CF4",justifyContent:"center",width:130,alignSelf:'center',marginLeft:Contants.Screen.width/11}}
+        return(
 
-            >
-            <Tab
-                heading={<TabHeading style={{backgroundColor:"white",alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                    <Text style={{fontSize:14,color:'#282828',backgroundColor: 'transparent'}}>外送订单</Text>
-                    <Image source={require('../../../img/order/bluequ.png')} style={{alignItems:'center',justifyContent:'center',marginLeft:5}}>
-                    <Text style={{color:"white",backgroundColor: 'transparent'}}>{this.state.msg}</Text></Image></TabHeading>}
-                activeTextStyle={{color:"#000000"}}
-                textStyle={{color:"#000000"}}
-                tabStyle={{backgroundColor:"white"}}
-                activeTabStyle={{backgroundColor:"white"}}
+            <View style={{flex:1,marginTop:20,backgroundColor:'#f9f9f9'}}>
+                <Tabs
+                initialPage={0}
+                 // heading="OrderFirst"
+                 tabBarUnderlineStyle={{backgroundColor:"#459CF4",justifyContent:"center",width:130,alignSelf:'center',marginLeft:Contants.Screen.width/11}}
 
-            >
-            <OrderFirst navigation={navigation}/>
-
-            </Tab>
-
-                <Tab   heading={<TabHeading style={{backgroundColor:"white",alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                    <Text style={{fontSize:14,color:'#282828',backgroundColor: 'transparent',}}>到店订单</Text>
-                    <Image source={require('../../../img/order/greenqu.png')} style={{alignItems:'center',justifyContent:'center',marginLeft:5}}>
-                    <Text style={{color:"white",backgroundColor: 'transparent'}}>{this.state.msgtow}</Text></Image></TabHeading>}
-                     activeTextStyle={{color:"#000000"}}
-                     textStyle={{color:"#000000"}}
-                     tabStyle={{backgroundColor:"white"}}
-                     activeTabStyle={{backgroundColor:"white"}}
-                     // tabBarUnderlineStyle={{backgroundColor:'red'}}
                 >
-            <OrderSecond navigation={navigation}/>
+                <Tab
+                    heading={<TabHeading style={{backgroundColor:"white",alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
+                        <Text style={{fontSize:14,color:'#282828',backgroundColor: 'transparent'}}>外送订单</Text>
+                        <Image source={require('../../../img/order/bluequ.png')} style={{alignItems:'center',justifyContent:'center',marginLeft:5}}>
+                        <Text style={{color:"white",backgroundColor: 'transparent'}}>{this.state.msg}</Text></Image></TabHeading>}
+                    activeTextStyle={{color:"#000000"}}
+                    textStyle={{color:"#000000"}}
+                    tabStyle={{backgroundColor:"white"}}
+                    activeTabStyle={{backgroundColor:"white"}}
 
-            </Tab>
-            </Tabs>
-        </View>)
+                >
+                <OrderFirst navigation={navigation}/>
+
+                </Tab>
+
+                    <Tab   heading={<TabHeading style={{backgroundColor:"white",alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
+                        <Text style={{fontSize:14,color:'#282828',backgroundColor: 'transparent',}}>到店订单</Text>
+                        <Image source={require('../../../img/order/greenqu.png')} style={{alignItems:'center',justifyContent:'center',marginLeft:5}}>
+                        <Text style={{color:"white",backgroundColor: 'transparent'}}>{this.state.msgtow}</Text></Image></TabHeading>}
+                         activeTextStyle={{color:"#000000"}}
+                         textStyle={{color:"#000000"}}
+                         tabStyle={{backgroundColor:"white"}}
+                         activeTabStyle={{backgroundColor:"white"}}
+                         // tabBarUnderlineStyle={{backgroundColor:'red'}}
+                    >
+                <OrderSecond navigation={navigation}/>
+
+                </Tab>
+                </Tabs>
+            </View>
+
+        )
     }
 }

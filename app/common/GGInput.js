@@ -182,7 +182,8 @@ var InputStyle = StyleSheet.create({
 
     },
     hengt:{
-        height:1,backgroundColor:'#FFFFFF',
+        height:1,
+        backgroundColor:'red',
         // alignSelf:'center',marginLeft:15,
         // marginRight:15,width:335
         marginLeft:15,
